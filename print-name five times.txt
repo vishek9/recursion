@@ -1,0 +1,15 @@
+package recursion;
+
+
+public class demo {
+	public static void printN(String N,int n){
+		if(n>5)return;
+		System.out.println(N);
+		printN(N,n+1);
+	}
+public static void main(String[] args) {
+	String N="vishek";
+	int n=1;
+	printN(N,n);
+}
+}

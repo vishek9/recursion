@@ -1,0 +1,14 @@
+package recursion;
+
+public class demo {
+   public static void printN(int i){
+		if(i>5)return;
+		System.out.println(i);
+		printN(i+1);
+	}
+public static void main(String[] args) {
+	
+	int n=1;
+	printN(n);
+}
+}
