@@ -1,0 +1,29 @@
+package recursion;
+
+import java.util.*;
+import java.io.*;
+
+public class demo {
+   public static void PrintS(int sum,int s,int arr[],int i,ArrayList<Integer> path){
+		if(i==arr.length){
+			if(s==sum)
+			System.out.println(path);
+			return;
+		}
+		else{path.add(arr[i]);
+		s+=arr[i];
+			PrintS(sum,s,arr,i+1,path);
+			path.remove(path.size()-1);
+			s-=arr[i];
+			PrintS(sum,s,arr,i+1,path);}
+			
+		return ;
+		}
+   public static void main(String[] args){
+	int arr[]= {1,2,3,1};
+	int sum=2;
+	
+	ArrayList<Integer> path=new ArrayList<>();
+	PrintS(sum,0,arr,0,path);
+}
+}
